@@ -1,9 +1,11 @@
 package appewtc.masterung.ishihara28feb15;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -29,7 +31,44 @@ public class MainActivity extends ActionBarActivity {
         //Initial Widget
         initialWidget();
 
+        //Create Button Controller
+        createButtonController();
+
+        //Create Radio Controller
+        createRadioController();
+
     }   // onCreate
+
+    private void createRadioController() {
+
+        ragChoice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                //Sound Effect
+                MediaPlayer objMediaPlayer = MediaPlayer.create(getBaseContext(),
+                        R.raw.effect_btn_shut);
+                objMediaPlayer.start();
+            }   // event
+        });
+
+    }   // createRadioController
+
+    private void createButtonController() {
+
+        btnAnswer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                //Sound Effect
+                MediaPlayer objMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.effect_btn_long);
+                objMediaPlayer.start();
+
+            }   // event
+        });
+
+    }   // createButtonController
 
     private void initialWidget() {
 
