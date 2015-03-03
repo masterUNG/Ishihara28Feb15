@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="question">
+
+        <item>นี่คือคำถามที่ 1</item>
+        <item>นี่คือคำถามที่ 2</item>
+        <item>นี่คือคำถามที่ 3</item>
+        <item>นี่คือคำถามที่ 4</item>
+        <item>นี่คือคำถามที่ 5</item>
+        <item>นี่คือคำถามที่ 6</item>
+        <item>นี่คือคำถามที่ 7</item>
+        <item>นี่คือคำถามที่ 8</item>
+        <item>นี่คือคำถามที่ 9</item>
+        <item>นี่คือคำถามที่ 10</item>
+
+
+    </string-array>
+
+</resources>

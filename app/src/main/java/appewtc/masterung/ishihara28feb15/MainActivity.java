@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
     private Button btnAnswer;
     private int intRadioButton, intIndex, intScore, intUserChoose[], intAnswerTrue[];
     private MyModel objMyModel;
-    private String strChoice[];
+    private String strChoice[], strMyQuestion[];
 
 
     @Override
@@ -64,6 +64,8 @@ public class MainActivity extends ActionBarActivity {
         intAnswerTrue[7] = 2;
         intAnswerTrue[8] = 4;
         intAnswerTrue[9] = 4;
+
+        strMyQuestion = getResources().getStringArray(R.array.question);
 
     }   // setUpArray
 
@@ -235,7 +237,7 @@ public class MainActivity extends ActionBarActivity {
         } else {
 
             // Controller Call View
-            txtQuestion.setText(Integer.toString(intIndex + 2) + ". What is this ?");
+            txtQuestion.setText(Integer.toString(intIndex + 2) + strMyQuestion[intIndex+1]);
             intIndex += 1;
 
             //Controller Call Model
